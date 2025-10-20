@@ -4,6 +4,11 @@ import { isLoggedIn } from "../lib/auth";
 
 export const revalidate = 60;
 
+export const metadata = {
+  title: "Products Store - Products List",
+  description: "Browse our full catalog of amazing products.",
+};
+
 export default async function ProductsPage() {
   if (!isLoggedIn()) {
     redirect("/login");
