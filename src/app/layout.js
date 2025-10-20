@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { isLoggedIn } from "./lib/auth";
 
-export default function RootLayout({ children }) {
-  const loggedIn = isLoggedIn();
+export default async function RootLayout({ children }) {
+  const loggedIn = await isLoggedIn();
 
   return (
     <html lang="en">
