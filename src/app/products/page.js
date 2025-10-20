@@ -10,7 +10,9 @@ export const metadata = {
 };
 
 export default async function ProductsPage() {
-  if (!isLoggedIn()) {
+  const loggedIn = await isLoggedIn();
+
+  if (!loggedIn) {
     redirect("/login");
   }
 

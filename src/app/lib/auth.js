@@ -4,8 +4,7 @@ const AUTH_COOKIE = "isAuthenticated";
 
 export async function isLoggedIn() {
   const cookieStore = cookies();
-  const cookie = await cookieStore.get("isAuthenticated");
-  return cookie?.value === "true";
+  return cookieStore.get("isAuthenticated")?.value === "true";
 }
 
 export function login() {
