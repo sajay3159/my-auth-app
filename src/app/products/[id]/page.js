@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { isLoggedIn } from "../../lib/auth";
 
 import { redirect } from "next/navigation";
@@ -36,7 +37,7 @@ export default async function ProductDetail({ params }) {
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
-      <img src={product.thumbnail} alt={product.title} width={200} />
+      <Image src={product.thumbnail} alt={product.title} width={200} />
     </div>
   );
 }
